@@ -1,0 +1,588 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: auto;
+    font-family: "Poppins", sans-serif;
+    background-color: #797575;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+    border-radius: 25px;
+    background-color: #fff;
+    border: 1px solid;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #0B6434;
+    border-radius: 25px;
+}
+::-webkit-scrollbar-corner{
+    border-radius: 25px;
+}
+
+header{
+    width: 100vw;
+    height: 60px;
+    background-color: white;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 100;
+    padding: 0 5vmax;
+}
+header .logo img{
+    width: 4vmax;
+}
+nav{
+    display: flex;
+    gap: 0 20px;
+}
+i{
+    color: white;
+    text-shadow: 1px 1px 2px #111;
+    transition: .5 ease;
+}
+i:hover{
+    font-size: 2.5vh;
+    transition: .5 ease;
+}
+nav a{
+    position: relative;
+    text-decoration: none;
+    color: black;
+}
+nav a::before{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    background-color: #0B6434;
+    transition: .5s ease;
+}
+nav a::after{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 0.5px;
+    background-color: #0B6434;
+    bottom: 0;
+    right: 0;
+    transition: .5s ease;
+}
+nav a:hover::before, nav a:hover::after , a:hover ,nav .active::before, nav .active::after , nav .active{
+    transition: .5s ease;
+    width: 100%;
+    color: darkgreen;
+    font-weight: 600;
+}
+header .menu{
+    display: none;
+}
+header .buttons{
+    display: flex;
+    gap: 0 10px;
+}
+header .buttons .btn{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: #679A7F;
+    color: #2B2B2B;
+    cursor: pointer;
+}
+.responsiveNav{
+    width: 50vw;
+    height: 40vh;
+    background-color: #FFFFFF;
+    position: fixed;
+    z-index: 3;  
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: start;
+    align-items: center;
+    padding: 20px;
+    right: 0;
+    transform: translateX(100%);
+    opacity: 0;
+    border: 2px solid #2B2B2B;
+    border-top: 0;
+    border-radius: 0 0 15px 15px;
+}
+.responsiveNav p{
+    position: relative;
+    text-decoration: none;
+    color: black;
+    transition: 0.5s ease;
+}
+.responsiveNav p:hover{
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+main{
+    top: 60px;
+    position: relative;
+    width: 100vw;
+    height: auto;
+    overflow-x: hidden;
+}
+.page1{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    background-color: white;
+}
+.page1 .top{
+    display: flex;
+    width: 100%;
+    height: 50vh;
+    background-color: #0B6434;
+}
+.page1 .top .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    height: 100%;
+    padding-left: 5vmax;
+}
+.page1 .top .left button{
+    margin-top: 1vmax;
+    width: 8vmax;
+    height: 2.5vmax;
+    background-color: #FFFFFF;
+    color: #0B6434;
+    font-size: 1.1vmax;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.page1 .top .left .h1Parent h1{
+    font-size: 3vmax;
+    line-height: 1.1;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+    text-shadow: 1px 1px 5px black;
+}
+.page1 .top .left .paraParent{
+    margin-top: 1vmax;
+}
+.page1 .top .left .paraParent p{
+    color: #f5f5f5;
+}
+.page1 .top .right{
+    width: 60%;
+    height: 100%;
+}
+.page1 .top .right figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.page1 .top .right figure img{
+    width: 45vmax; 
+}
+.page1 .bottom h1{
+    padding-left: 5vmax;
+    font-size: 2vmax;
+    margin-top: 2vmax;
+    font-family: "Montserrat", sans-serif;
+}
+.page1 .bottom .scroller{
+    display: flex;
+    gap: 3vmax;
+    justify-content: center;
+    margin-top: 1vmax;
+    
+}
+.page1 .bottom .scroller button{
+    width: 12vmax;
+    height: 12vmax;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.page1 .bottom .scroller button:hover{
+    color: #0B6434;
+}
+.page1 .bottom .scroller figure img{
+    width: 10vmax;
+}
+.page1 .bottom .scroller h4{
+    font-size: 1.2vmax;
+    text-transform: uppercase;
+}
+.bottom center{
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+center .round{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #797575;
+    position: relative;
+    margin-bottom: 3vmax;
+}
+center .round1{
+    background-color: #0B6434;
+}
+
+.page2{
+    width: 100vw;
+    background-color: #fff;
+}
+.page2 h1{
+    padding: 3vmax 5vmax;
+    font-size: 2vmax;
+    font-family: "Montserrat", sans-serif;
+    
+}
+.page2 .container-parent{
+    display: flex;
+    padding: 0 5vmax;
+    width: 100%
+
+}
+.page2 .container-parent .container1{
+    background-color: #C8A938;
+    width: 40%;
+    height: 28vmax;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.container1 .image, .container1 .image figure{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container1 .content{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container1 .content h1{
+    font-size: 3vmax;
+    padding: 0;
+}
+.page2 .container-parent .container2{
+    width: 60%;
+    background-color: #FFFFFF;
+    height: 28vmax;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.page2 .container2 .sub-container{
+    width: 95%;
+    height: 45%;
+    margin-left: 5%;
+    border-radius: 10px;
+    display: flex;
+}
+.page2 .container2 .sub-container .image{
+    width: 40%;
+    height: 100%;
+}
+.page2 .container2 .sub-container .image figure{
+    width: 100%;
+    height: 100%;
+}
+.page2  .container2 .sub-container1{
+    background-color: #FD5151;
+}
+.page2  .container2 .sub-container1 .content{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.page2  .container2 .sub-container1 .content h1{
+    font-size: 1vmax;
+    color: white;
+    text-align: center;
+    padding: 1vmax;
+}
+.page2  .container2 .sub-container1 .content h1 span{
+    font-size: 2vmax;
+}
+.page2  .container2 .sub-container1 .content button{
+    width: 8vmax;
+    height: 2.5vmax;
+    background-color: black;
+    color: white;
+    font-size: 1.1vmax;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.page2  .container2 .sub-container2{
+    background-color: #FF9564;
+}
+.container2 .sub-container2 .content , .sub-container2 .content figure{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container2 .sub-container2 .content figure img{
+    width: 100%;
+}
+.container-parent .container1 figure img{
+    width: 50%;
+}
+.container-parent .container2 figure img{
+    width: 20vmax;
+}
+
+
+.page3{
+    width: 100vw;
+    height: fit-content;
+    background-color: #fff;
+}
+.page3 .heading h1{
+    padding: 3vmax 5vmax;
+    font-size: 2vmax;
+    font-family: "Montserrat", sans-serif;
+    
+}
+.page3 .card-parent{
+    padding: 0 4vmax;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.page3 .cards{
+    width: 200px;
+    height: 250px;
+    border: 2px solid #0B6434;
+    border-radius: 5px;
+    margin: 1vmax;
+}
+.page3 .cards .image{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page3 .cards .content{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2px;
+}
+.page3 .cards .image img{
+    width: 50%;
+}
+.page3 .cards .content button{
+    width: 50%;
+    height: 20%;
+    background-color: #0B6434;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin-top: 2px;
+}
+
+footer{
+    width: 100vw;
+    min-height: 150px;
+    display: flex;
+    gap: 2vmax;
+    overflow-x: hidden;
+    background-color: #C6EAD7;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+footer .card{
+    width: 150px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+footer .card h1{
+    font-size: 1.5vmax;
+    padding: 0;
+    margin: 0;
+}
+.linkedin{
+    color: skyblue;
+}
+.github{
+    color: black;
+}
+.follow a{
+    text-decoration: none;
+    color: black;
+}
+
+@media (max-width:900px) {
+    .page1 .top{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        background-color: #0B6434;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 2vmax;
+    }
+    .page1 .top .left{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        padding-left: 0;
+    }
+    .page1 .top .left .h1Parent h1{
+        font-size: 3vmax;
+        line-height: 1.1;
+        color: white;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-family: "Montserrat", sans-serif;
+        text-shadow: 1px 1px 5px black;
+        text-align: center;
+    }
+    .page1 .top .left button{
+        width: 12vmax;
+        height: 4vmax;
+        font-size: 1.5vmax;
+    }
+    .page2 .container-parent{
+        display: flex;
+        padding: 0 2vmax;
+        width: 100%;
+        flex-direction: column;
+        gap: 25px;
+    }
+    .page2 .container-parent .container1{
+        background-color: #C8A938;
+        width: 100%;
+        height: 40vmax;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .page2 .container-parent .container2{
+        width: 100%;
+        background-color: #FFFFFF;
+        height: 32vmax;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .page2 .container2 .sub-container{
+        margin-left: 0;
+        width: 100%;
+    }
+    
+}
+@media (max-width:600px) {
+    body,main{
+        overflow-x: hidden;
+    }
+    nav{
+        display: none;
+    }
+    header{
+        width: 100vw;
+        height: 60px;
+        background-color: white;
+        border: 1px solid;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        z-index: 100;
+        padding: 0 2vmax;
+    }
+    header .menu{
+        display: block;
+    }
+    .menu button{
+        width: 30px;
+        height: 30px;
+        background-color: #679A7F;
+        border: none;
+        border-radius: 3px;
+        color: #111;
+        margin-left: 5px;
+        cursor: pointer;
+    }
+    .menu-close{
+        display: none;
+    }
+    .page3 .card-parent{
+        padding: 0 2vmax;
+        width: 100vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .page3 .cards{
+        width: 150px;
+        height: 200px;
+        border: 2px solid #0B6434;
+        border-radius: 5px;
+        margin: 1vmax;
+    }
+    .page3 .cards .content{
+        width: 100%;
+        height: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1px;
+    }
+    .page3 .cards .content button{
+        width: 50%;
+        height: 20%;
+        background-color: #0B6434;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        margin-top: 2px;
+        font-size: 1.2vmax;
+    }
+}

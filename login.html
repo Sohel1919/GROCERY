@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reg & login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <main>
+        <section class="parent">
+        
+            <section class="register">
+                <div class="heading">
+                    <h1>Register</h1>
+                </div>
+                <label for="name">Name</label>
+                <input type="text" name="name">
+                <br>
+                <label for="username">Username</label>
+                <input type="text" name="username">
+                <br>
+                <label for="createpassword">Create Password</label>
+                <input type="text" name="createpassword">
+                <br>
+                <label for="confirmpassword">Confirm Password</label>
+                <input type="text" name="confirmpassword">
+                <br>
+                <button class="btn">Register</button>
+                <button class="log-page">Login</button>
+            </section>
+        
+            <section class="login">
+                <div class="heading">
+                    <h1>Login</h1>
+                </div>
+                <label for="username">Username</label>
+                <input type="text" name="username">
+                <br>
+                <label for="password">Password</label>
+                <input type="text" name="password">
+                <br>
+                <button class="btn">Login</button>
+                <button class="reg-page">Register</button>
+            </section>
+        
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="loginGsap.js"></script>
+</body>
+</html>
